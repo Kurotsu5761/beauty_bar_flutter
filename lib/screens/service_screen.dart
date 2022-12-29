@@ -11,9 +11,10 @@ import 'booking_screen.dart';
 class ServiceScreen extends StatefulWidget {
   final Service service;
 
-  const ServiceScreen({required this.service});
+  const ServiceScreen({super.key, required this.service});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ServiceScreenState createState() => _ServiceScreenState();
 }
 
@@ -43,7 +44,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
           ),
           Expanded(
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),
@@ -55,11 +56,11 @@ class _ServiceScreenState extends State<ServiceScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         "Choose Your Master",
                         style: kTitleStyle,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       MasterCarousel(
@@ -67,10 +68,10 @@ class _ServiceScreenState extends State<ServiceScreen> {
                         onSelect: _selectMaster,
                         selected: _selectedMaster,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text(
+                      const Text(
                         "Choose your procedure",
                         style: kTitleStyle,
                       ),
@@ -79,7 +80,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                         onSelect: _selectProcedure,
                         selected: _selectedProcedure,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Button(

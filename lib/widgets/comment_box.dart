@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CommentBox extends StatelessWidget {
+  const CommentBox({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15.0),
       child: TextField(
         minLines: 2,
         maxLines: 10,

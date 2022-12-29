@@ -8,6 +8,8 @@ import '../models/service_model.dart';
 import '../screens/service_screen.dart';
 
 class ServiceList extends StatelessWidget {
+  const ServiceList({super.key});
+
   Widget _buildService(int index, BuildContext context) {
     Service service = services[index];
 

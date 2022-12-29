@@ -12,12 +12,14 @@ class MasterCarousel extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MasterCarouselState createState() => _MasterCarouselState();
 }
 
 class _MasterCarouselState extends State<MasterCarousel> {
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     Widget _buildMaster(int index) {
       bool selected = widget.selected == index;
       Master master = widget.masters[index];
@@ -67,7 +69,7 @@ class _MasterCarouselState extends State<MasterCarousel> {
 
     return Container(
       height: 130,
-      padding: EdgeInsets.only(left: 10),
+      padding: const EdgeInsets.only(left: 10),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: widget.masters

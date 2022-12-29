@@ -32,7 +32,7 @@ class _BookingScreenState extends State<BookingScreen> {
           ),
           Expanded(
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),
@@ -44,10 +44,10 @@ class _BookingScreenState extends State<BookingScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
+                      SizedBox(
                         height: 70,
                         child: ListView(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             vertical: 5,
                             horizontal: 10,
                           ),
@@ -59,14 +59,14 @@ class _BookingScreenState extends State<BookingScreen> {
                               .toList(),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text(
+                      const Text(
                         "Available Slot",
                         style: kTitleStyle,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Wrap(
@@ -78,15 +78,15 @@ class _BookingScreenState extends State<BookingScreen> {
                             .map((e) => _buildTimeWidget(e.key))
                             .toList(),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text("Additional comments", style: kTitleStyle),
-                      SizedBox(
+                      const Text("Additional comments", style: kTitleStyle),
+                      const SizedBox(
                         height: 20,
                       ),
-                      CommentBox(),
-                      SizedBox(
+                      const CommentBox(),
+                      const SizedBox(
                         height: 20,
                       ),
                       Button(
@@ -116,20 +116,20 @@ class _BookingScreenState extends State<BookingScreen> {
         child: Container(
           width: 40,
           decoration: selected
-              ? BoxDecoration(
+              ? const BoxDecoration(
                   color: kBlue,
                   borderRadius: BorderRadius.all(
                     Radius.circular(10),
                   ),
                   boxShadow: kBoxShadow)
-              : BoxDecoration(),
+              : const BoxDecoration(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 day.day.toString(),
-                style: TextStyle(
+                style: const TextStyle(
                   fontFamily: kMainText,
                   fontWeight: FontWeight.w600,
                   color: kDarkBlue,
@@ -137,7 +137,7 @@ class _BookingScreenState extends State<BookingScreen> {
               ),
               Text(
                 day.date,
-                style: TextStyle(
+                style: const TextStyle(
                   color: kDarkBlue,
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
@@ -174,7 +174,7 @@ class _BookingScreenState extends State<BookingScreen> {
               Text(
                 time,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: kDarkBlue, fontSize: 12),
+                style: const TextStyle(color: kDarkBlue, fontSize: 12),
               ),
             ],
           ),

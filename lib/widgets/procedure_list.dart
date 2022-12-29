@@ -11,6 +11,7 @@ class ProcedureList extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ProcedureListState createState() => _ProcedureListState();
 }
 
